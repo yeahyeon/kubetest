@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: my-nginx
+spec: 
+  containers:
+  - name: nginx
+    image: my-nignx:latest
+    ports:
+    - containerPort: 80
+  - name: my-nginx
+    image: vomonong/my-nignx:latest
+    ports: 
+    - containerPort: 80

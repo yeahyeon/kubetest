@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: front
+  template:
+    metadata:
+      labels: 
+        app: front
+    spec:
+      containers:
+        - name: my-front
+          imagePullPolicy: Always
+          image: tjdanqkr/my-nginx:update
+          ports:
+            - containerPort: 80
+
+
+
+
+
+
+
